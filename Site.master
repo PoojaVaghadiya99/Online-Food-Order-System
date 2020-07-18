@@ -1,0 +1,292 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+    
+    <form runat="server">
+     <!-- Header -->
+	<header>
+		<!-- Header desktop -->
+		<div class="wrap-menu-header gradient1 trans-0-4">
+			<div class="container h-full">
+				<div class="wrap_header trans-0-3">
+					<!-- Logo -->
+					<div class="logo">
+						<a href="index.aspx">
+							<img src="images/icons/logo.png" alt="IMG-LOGO" data-logofixed="images/icons/logo.png">
+						</a>
+					</div>
+
+
+
+					<!-- Menu -->
+					<div class="wrap_menu p-l-45 p-l-0-xl">
+						<nav class="menu">
+							<ul class="main_menu">
+								<li>
+									<a href="index.aspx">Home</a>
+								</li>
+
+								<li>
+									<a href="Menu.aspx">Menu</a>
+								</li>
+
+								<li>
+									<a href="Reservation.aspx">Table Reservation</a>
+								</li>
+
+								<li>
+									<a href="Gallery.aspx">Gallery</a>
+								</li>
+
+								<li>
+									<a href="About.aspx">About</a>
+								</li>
+
+								<li>
+									<a href="Contact.aspx">Contact</a>
+								</li>
+
+                                <li>
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
+                                    <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">Logout</asp:LinkButton>
+                                    
+								</li>
+
+                                <li></li>
+
+                                <li>
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/icons/Avtar.png" Height="20px" Width="20px"></asp:Image>
+                                    <asp:Label ID="L1" CssClass="login_user" runat="server"></asp:Label>
+                                </li>
+							</ul>
+						</nav>
+					</div>
+
+                    
+				</div>
+			</div>
+		</div>
+	</header>
+
+    <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+       
+	<!-- Footer -->
+	<footer class="bg1">
+		<div class="container p-t-40 p-b-70">
+			<div class="row">
+				<div class="col-sm-6 col-md-4 p-t-50">
+					<!-- - -->
+					<h4 class="txt13 m-b-33">
+						Contact Us
+					</h4>
+
+					<ul class="m-b-70">
+						<li class="txt14 m-b-14">
+							<i class="fa fa-map-marker fs-16 dis-inline-block size19" aria-hidden="true"></i>
+							8-A National High-Way
+						</li>
+
+						<li class="txt14 m-b-14">
+							<i class="fa fa-phone fs-16 dis-inline-block size19" aria-hidden="true"></i>
+							(+91) 8989898989
+						</li>
+
+						<li class="txt14 m-b-14">
+							<i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
+							imperialspice@gmail.com
+						</li>
+					</ul>
+
+					<!-- - -->
+					<h4 class="txt13 m-b-32">
+						Opening Times
+					</h4>
+
+					<ul>
+						<li class="txt14">
+							09:30 AM – 11:00 PM
+						</li>
+
+						<li class="txt14">
+							Every Day
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-6 col-md-4 p-t-50">
+					<!-- - -->
+					<h4 class="txt13 m-b-33">
+						OUR FACILITIES
+					</h4>
+                    <ul>
+						<li class="txt14 m-b-14">&#187; &nbsp;&nbsp;&nbsp;Restaurant</li>
+						<li class="txt14 m-b-14">&#187; &nbsp;&nbsp;&nbsp;24 Hour Online Food Delivery</li>
+                        <li class="txt14 m-b-14">&#187; &nbsp;&nbsp;&nbsp;Fully Air-conditioner</li>
+                        <li class="txt14 m-b-14">&#187; &nbsp;&nbsp;&nbsp;24 Hour Reception</li>
+                        <li class="txt14 m-b-14">&#187; &nbsp;&nbsp;&nbsp;Internet Zone</li>
+                        <li class="txt14 m-b-14">&#187; &nbsp;&nbsp;&nbsp;Kids Entertainment</li>
+                        <li class="txt14 m-b-14">&#187; &nbsp;&nbsp;&nbsp;Credit Card Facilities</li>
+                        <li class="txt14 m-b-14">&#187; &nbsp;&nbsp;&nbsp;Candle Light Dinner</li>
+                        <li class="txt14 m-b-14">&#187; &nbsp;&nbsp;&nbsp;Free Parking</li>
+                       
+					</ul>
+                 </div>
+
+					
+				<div class="col-sm-6 col-md-4 p-t-50">
+					<!-- - -->
+					<h4 class="txt13 m-b-38">
+						Gallery
+					</h4>
+
+					<!-- Gallery footer -->
+					<div class="wrap-gallery-footer flex-w">
+						<a class="item-gallery-footer wrap-pic-w" href="images/1.jpg" data-lightbox="gallery-footer">
+							<img height="80px" src="images/1.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/2.jpg" data-lightbox="gallery-footer">
+							<img height="80px" src="images/2.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/3.jpg" data-lightbox="gallery-footer">
+							<img height="80px" src="images/3.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/4.jpg" data-lightbox="gallery-footer">
+							<img height="80px" src="images/4.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/5.jpg" data-lightbox="gallery-footer">
+							<img height="80px" src="images/5.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/6.jpg" data-lightbox="gallery-footer">
+							<img height="80px" src="images/6.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/7.jpg" data-lightbox="gallery-footer">
+							<img height="80px" src="images/7.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/8.jpg" data-lightbox="gallery-footer">
+							<img height="80px" src="images/8.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/9.jpg" data-lightbox="gallery-footer">
+							<img height="80px" src="images/9.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/10.jpg" data-lightbox="gallery-footer">
+							<img height="80px" src="images/10.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/1.jpg" data-lightbox="gallery-footer">
+							<img height="80px" src="images/11.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/12.jpg" data-lightbox="gallery-footer">
+							<img height="80px" src="images/12.jpg" alt="GALLERY">
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="end-footer bg2">
+			<div class="container">
+				<div class="flex-sb-m flex-w p-t-22 p-b-22">
+					<div class="p-t-5 p-b-5">
+						<a href="#" class="fs-15 c-white"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+						<a href="#" class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
+						<a href="#" class="fs-15 c-white"><i class="fa fa-twitter m-l-18" aria-hidden="true"></i></a>
+					</div>
+
+					<div class="txt17 p-r-20 p-t-5 p-b-5">
+						Copyright &copy; 2020 All Rights Reserved  |  The Imperial Spice
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+    <!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/daterangepicker/moment.min.js"></script>
+	<script type="text/javascript" src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/slick-custom.js"></script>
+    <!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/parallax100/parallax100.js"></script>
+	<script type="text/javascript">
+	    $('.parallax100').parallax100();
+	</script>
+    <!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+    <!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+    </form>
+</body>
+</html>
